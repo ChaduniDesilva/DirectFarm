@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DirectFarm LK</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="container nav-content">
+        <div class="logo">
+            <img src="DirectFarm logo.png" alt="logo">
+            <h2>DirectFarm LK</h2>
+        </div>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="#">Insights</a>
+            <a href="#">Blog</a>
+            <a href="#">FAQ</a>
+            <a href="#">Forum</a>
+            <a href="contactus.html">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button class="login-btn">Login</button>
+            <button class="register-btn">Register</button>
+        </div>
+    </div>
+</header>
+<a href="marketplace.html" class="back-link">
+    <i class="fa-solid fa-arrow-left"></i> Back to Marketplace
+</a>
+<div class="product-details-container">
+
+    <!-- LEFT: Image -->
+    <div class="product-image">
+        <img src="rice.jpeg" alt="cabbage">
+    </div>
+
+    <!-- RIGHT: Product Info -->
+    <div class="product-info">
+        <h1 class="product-title">Basmathi Rice</h1>
+         <p><i class="fa-solid fa-location-dot"></i>Polonnaruwa</p><br>
+<h3 class="price-tag">Rs. 220/ kg</h3><br><br>
+<hr>
+        <p class="product-description">
+            <h3>Description</h3><br>
+            Fresh green cabbage harvested from local farms in Badulla. Crisp, nutritious, and ideal for salads, stir-fries, and traditional Sri Lankan dishes.
+
+        <p class="highlight"><i class=" fa-solid fa-truck"></i> Free delivery over Rs. 1000 
+         <i class="fa-solid fa-circle-check"></i> Quality guaranteed</p>
+
+        
+
+        <!-- Quantity -->
+        <div class="quantity-box">
+            <button class="qty-btn" onclick="changeQty(-1)">–</button>
+            <input type="number" id="qty" value="1" min="1">
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+
+        <!-- Total Price -->
+        <p class="total">Total Price: Rs. <span id="totalPrice">220</span></p>
+
+        <!-- Buttons -->
+        <button class="add-cart-btn " onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+        <button class="contact-btn"><i class="fa-solid fa-message"></i> Contact Farmer</button>
+    </div>
+
+</div>
+
+
+
+<!-- Farmer Info -->
+<div class="farmer-section">
+
+    <h2>About the Farmer</h2>
+
+    <div class="farmer-box">
+
+        <div class="farmer-left">
+            <h3 > <i class="fa fa-user-circle"></i> S.Dissanayake</h3><br>
+            <p><i class="fa-solid fa-location-dot"></i> Polonnaruwa
+            <i class="fa-solid fa-star"></i> 4.8ratings
+            <i class="fa-solid fa-seedling"></i> 500+ sales
+            <i class="fa-solid fa-calendar"></i> Member since 2021</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Customer Reviews -->
+<div class="reviews-section">
+
+    <h2>Customer Reviews</h2>
+
+    <div class="review-card">
+        <h4>Apsara Dilshan</h4>
+        <p><i class="fa-solid fa-star"></i> 5.0</p>
+        <p>Very fresh and clean. Fast delivery!</p>
+    </div>
+
+    <div class="review-card">
+        <h4>Kasun Silva</h4>
+        <p><i class="fa-solid fa-star"></i> 4.5</p>
+        <p>Good quality carrots. Worth the price.</p>
+    </div>
+
+</div>
+ <!-- REVIEW SECTION -->
+<div class="review-section">
+    <h2>Write a Review</h2>
+
+    <!-- Star Rating -->
+    <div class="star-rating" id="starRating">
+        <i class="fa-solid fa-star star" data-value="1"></i>
+        <i class="fa-solid fa-star star" data-value="2"></i>
+        <i class="fa-solid fa-star star" data-value="3"></i>
+        <i class="fa-solid fa-star star" data-value="4"></i>
+        <i class="fa-solid fa-star star" data-value="5"></i>
+    </div>
+            <!-- Review Text -->
+    <textarea id="reviewText" class="review-input" placeholder="Write your review here..."></textarea>
+
+    <!-- Submit Button -->
+    <button class="submit-review-btn" onclick="submitReview()">Submit Review</button>
+
+    <!-- Display Reviews -->
+    <div class="review-list" id="reviewList"></div>
+</div>
+
+        </div>
+        <!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-box">
+        <p id="popupMessage">Item added to cart!</p>
+        <button onclick="closePopup()" class="popup-btn">OK</button>
+    </div>
+</div>
+
+
+<script>
+    let pricePerUnit = 220;
+ let isLoggedIn = false; //  Change to true if user is logged in
+    
+ function updateTotal() {
+        let qty = document.getElementById("qty").value;
+        document.getElementById("totalPrice").innerText = qty * pricePerUnit;
+    }
+
+    function changeQty(val) {
+        let qtyInput = document.getElementById("qty");
+        let qty = parseInt(qtyInput.value) + val;
+
+        if(qty < 1) qty = 1;
+
+        qtyInput.value = qty;
+        updateTotal();
+    }
+     // ⭐ ADD TO CART FUNCTION
+    function addToCart() {
+
+        if (!isLoggedIn) {
+            document.getElementById("popupMessage").innerText =
+                "You must log in before adding items to cart.";
+            showPopup();
+            return;
+        }
+
+        // Otherwise add to cart
+        document.getElementById("popupMessage").innerText =
+            "Product added to your cart successfully!";
+        showPopup();
+    }
+
+    function showPopup() {
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+
+
+    let selectedRating = 0;
+
+    // STAR SELECTION
+    document.querySelectorAll(".star").forEach(star => {
+        star.addEventListener("click", () => {
+            selectedRating = star.getAttribute("data-value");
+
+            // highlight selected stars
+            document.querySelectorAll(".star").forEach(s => {
+                s.classList.remove("selected");
+                if (s.getAttribute("data-value") <= selectedRating) {
+                    s.classList.add("selected");
+                }
+            });
+        });
+    });
+
+    // SUBMIT REVIEW
+    function submitReview() {
+        let reviewText = document.getElementById("reviewText").value;
+        if (selectedRating === 0) {
+            alert("Please select a star rating.");
+            return;
+        }
+        if (reviewText.trim() === "") {
+            alert("Please write something before submitting.");
+            return;
+        }
+
+        // Create Review Block
+        let reviewList = document.getElementById("reviewList");
+
+        let reviewItem = document.createElement("div");
+        reviewItem.classList.add("review-item");
+
+        let stars = "★".repeat(selectedRating) + "☆".repeat(5 - selectedRating);
+
+        reviewItem.innerHTML = `
+            <div class="review-stars">${stars}</div>
+            <p>${reviewText}</p>
+        `;
+
+        reviewList.prepend(reviewItem);
+
+        // Reset fields
+        selectedRating = 0;
+        document.getElementById("reviewText").value = "";
+        document.querySelectorAll(".star").forEach(s => s.classList.remove("selected"));
+    }
+</script>
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>DirectFarm LK</h3>
+            <p>Connecting farmers and consumers across Sri Lanka.</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="#">Insights</a>
+            <a href="#">Blog</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Support</h4>
+            <a href="#">FAQ</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="contactus.html">Contact</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Connect</h4>
+            <p>Email: info@directfarmlk.com</p>
+            <p>Phone: +94 11 234 5678</p>
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">© 2025 DirectFarm LK. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
