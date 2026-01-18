@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | DirectFarm LK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Root Variables & Reset --- */
+        :root {
+            --primary-green: #56ad58;
+            --dark-blue: #0e1726;
+            --light-bg: #F9FAFB;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --white: #ffffff;
+            --border-color: #E5E7EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* --- Navbar --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            color: var(--primary-green);
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-login {
+            padding: 8px 20px;
+            border: 1px solid var(--primary-green);
+            color: var(--primary-green);
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-register {
+            padding: 8px 20px;
+            background: var(--primary-green);
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background-color: var(--primary-green);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- FAQ Content --- */
+        .faq-container {
+            max-width: 800px;
+            margin: -40px auto 40px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            list-style: none;
+        }
+
+        summary::after {
+            content: '⌄';
+            font-size: 20px;
+            color: var(--text-muted);
+        }
+
+        details[open] summary::after {
+            content: '⌃';
+        }
+
+        .faq-answer {
+            padding-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* --- Support CTA --- */
+        .support-cta {
+            background-color: #F1F8F1;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .support-cta h3 { margin-bottom: 10px; font-size: 18px; }
+        .support-cta p { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; }
+
+        .cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-email {
+            background: var(--primary-green);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        .btn-call {
+            border: 1px solid var(--primary-green);
+            color: var(--primary-green);
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 60px 8% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 13px;
+            color: #A0AEC0;
+            margin-bottom: 10px;
+            list-style: none;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1A2B3C;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #718096;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links, .auth-buttons { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="C:\Users\thilo\Downloads\Mini project Grp10\DirectFarm logo.png" width="24" height="24">
+            DirectFarm LK
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Insights</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="btn-login">Login</a>
+            <a href="#" class="btn-register">Register</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about DirectFarm LK</p>
+    </section>
+
+    <div class="faq-container">
+        <details class="faq-item" open>
+            <summary>How does DirectFarm LK work?</summary>
+            <div class="faq-answer">DirectFarm LK connects local farmers directly with consumers, ensuring fresher produce and better prices for everyone involved.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Is there a delivery fee?</summary>
+            <div class="faq-answer">Delivery fees vary based on your location and the specific farmer's settings. You can see the fee at checkout.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I know the produce is fresh?</summary>
+            <div class="faq-answer">We prioritize same-day harvesting and direct delivery from farm to table.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Can I return or exchange products?</summary>
+            <div class="faq-answer">Yes, we have a 24-hour return policy for quality-related issues.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What payment methods do you accept?</summary>
+            <div class="faq-answer">We accept credit/debit cards, bank transfers, and cash on delivery.</div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I become a seller/farmer on DirectFarm LK?</summary>
+            <div class="faq-answer">Click on the 'Register' button and select 'Farmer' to start your onboarding process.</div>
+        </details>
+        
+        <details class="faq-item">
+            <summary>What areas do you deliver to?</summary>
+            <div class="faq-answer">Currently, we cover the Western and Central provinces, with plans to expand nationwide.</div>
+        </details>
+    </div>
+
+    <section class="support-cta">
+        <h3>Still have questions?</h3>
+        <p>Can't find the answer you're looking for? Our customer support team is here to help.</p>
+        <div class="cta-btns">
+            <a href="mailto:info@directfarmlk.com" class="btn-email">Email Us</a>
+            <a href="tel:+94112345678" class="btn-call">Call Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>DirectFarm LK</h4>
+                <p>Connecting farmers and consumers across Sri Lanka.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <li>Home</li>
+                <li>About</li>
+                <li>Marketplace</li>
+                <li>Insights</li>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <li>FAQ</li>
+                <li>Terms of Service</li>
+                <li>Privacy Policy</li>
+                <li>Contact</li>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p>Email: info@directfarmlk.com</p>
+                <p>Phone: +94 11 234 5678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 DirectFarm LK. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
