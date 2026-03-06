@@ -34,7 +34,7 @@ A customer-facing portal for seamless agricultural shopping.
 
 | Marketplace Interface | Farmer Analytics |
 | :--- | :--- |
-| ![Marketplace Preview](marketplace.html) | ![Analytics Dashboard](Analytics.jpeg) |
+| ![Marketplace Preview](Img/Screenshot-2025-12-04-012018.png) | ![Analytics Dashboard](Analytics.jpeg) |
 
 | Product Inventory | Shopping Cart UI |
 | :--- | :--- |
