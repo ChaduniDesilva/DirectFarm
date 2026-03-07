@@ -73,9 +73,9 @@ nav a:hover {
 }
 
 /* HERO */
-.hero {
+.hero-faq {
     height: 110vh;
-    background: url('farmer.jpeg')
+    background: url('Img/Home\ Main.png')
         no-repeat center/cover;
     display: flex;
     align-items: center;
@@ -143,10 +143,8 @@ nav a:hover {
 
 .category-card img {
     width: 100%;
-    height: 160px;
+    height: 265px;
     object-fit: cover;
-    
-
 }
 
     

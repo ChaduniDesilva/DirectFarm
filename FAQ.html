@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ | DirectFarm LK</title>
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* --- Root Variables & Reset --- */
@@ -31,7 +32,7 @@
         }
 
         /* --- Navbar --- */
-        nav {
+        /*nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -82,7 +83,7 @@
             border-radius: 20px;
             text-decoration: none;
             font-size: 14px;
-        }
+        }*/
 
         /* --- Hero Section --- */
         .hero {
@@ -225,26 +226,31 @@
 </head>
 <body>
 
-    <nav>
+   <!-- NAVBAR -->
+<header class="navbar">
+    <div class="container nav-content">
         <div class="logo">
-            <img src="C:\Users\thilo\Downloads\Mini project Grp10\DirectFarm logo.png" width="24" height="24">
-            DirectFarm LK
+            <img src="Img/DirectFarm logo.png" alt="logo">
+            <h2>DirectFarm LK</h2>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Marketplace</a></li>
-            <li><a href="#">Insights</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="auth-buttons">
-            <a href="#" class="btn-login">Login</a>
-            <a href="#" class="btn-register">Register</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="insights.html">Insights</a>
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQ</a>
+            <a href="forum.html">Forum</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button class="login-btn">Login</button>
+            <button class="register-btn">Register</button>
         </div>
-    </nav>
+    </div>
+</header>
 
     <section class="hero">
         <h1>Frequently Asked Questions</h1>
@@ -297,36 +303,42 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>DirectFarm LK</h4>
-                <p>Connecting farmers and consumers across Sri Lanka.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <li>Home</li>
-                <li>About</li>
-                <li>Marketplace</li>
-                <li>Insights</li>
-            </div>
-            <div class="footer-col">
-                <h4>Support</h4>
-                <li>FAQ</li>
-                <li>Terms of Service</li>
-                <li>Privacy Policy</li>
-                <li>Contact</li>
-            </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <p>Email: info@directfarmlk.com</p>
-                <p>Phone: +94 11 234 5678</p>
-            </div>
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>DirectFarm LK</h3>
+            <p>Connecting farmers and consumers across Sri Lanka.</p>
         </div>
-        <div class="footer-bottom">
-            &copy; 2025 DirectFarm LK. All rights reserved.
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="insights.html">Insights</a>
+            <a href="blog.html">Blog</a>
         </div>
-    </footer>
+
+        <div class="footer-section">
+            <h4>Support</h4>
+            <a href="faq.html">FAQ</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Connect</h4>
+            <p>Email: info@directfarmlk.com</p>
+            <p>Phone: +94 11 234 5678</p>
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">© 2025 DirectFarm LK. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
