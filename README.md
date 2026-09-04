@@ -1,7 +1,7 @@
 # 🌾 DirectFarm LK — Fresh From Farm to You
 
 <p align="center">
-  <img src="farmer.jpeg" alt="DirectFarm LK Banner" width="100%"/>
+  <img src="Home.png" alt="DirectFarm LK Banner" width="100%"/>
 </p>
 
 <p align="center">
@@ -219,7 +219,7 @@ This project was developed by a team of 4 students from Sabaragamuwa University 
 
 | Home Page | Marketplace |
 |-----------|------------|
-| ![Home](screenshots/home.png) | ![Marketplace](screenshots/marketplace.png) |
+| ![Home](screenshots/Home.png) | ![Marketplace](screenshots/marketplace.png) |
 
 | Farmer Dashboard | Admin Panel |
 |-----------------|------------|
