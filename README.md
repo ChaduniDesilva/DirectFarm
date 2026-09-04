@@ -213,7 +213,7 @@ This project was developed by a team of 4 students from Sabaragamuwa University 
 
 ---
 
-/*## 📸 Screenshots
+## 📸 Screenshots
 
 > Add your screenshots to a `/screenshots` folder and they will appear here.
 
@@ -225,7 +225,7 @@ This project was developed by a team of 4 students from Sabaragamuwa University 
 |-----------------|------------|
 | ![Farmer](screenshots/farmer.png) | ![Admin](screenshots/admin.png) |
 
----*/
+---
 
 ## 🔐 Security Features
 
