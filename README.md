@@ -1,7 +1,7 @@
 # 🌾 DirectFarm LK — Fresh From Farm to You
 
 <p align="center">
-  <img src="Home.png" alt="DirectFarm LK Banner" width="100%"/>
+  <img src="screenshots/Home.png" alt="DirectFarm LK Banner" width="100%"/>
 </p>
 
 <p align="center">
