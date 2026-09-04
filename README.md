@@ -1,7 +1,7 @@
 # 🌾 DirectFarm LK — Fresh From Farm to You
 
 <p align="center">
-  <img src="screenshots/home.png" alt="DirectFarm LK Banner" width="100%"/>
+  <img src="farmer.jpeg" alt="DirectFarm LK Banner" width="100%"/>
 </p>
 
 <p align="center">
@@ -206,14 +206,14 @@ This project was developed by a team of 4 students from Sabaragamuwa University 
 
 | Student | Pages | Backend Responsibilities |
 |---------|-------|--------------------------|
-| **22APP5862 — K.C.I De Silva** | Home, Login, Consumer Register, Consumer Dashboard, Marketplace, Product Details | Consumer login, Product fetching, Marketplace display |
-| **22APP6120 — I.Y.S Jayaweera** | Farmer Register, Farmer Dashboard, Product Management, Farmer Orders, Community Forum | Farmer login, CRUD on products, Order handling |
-| **22APP6133 — A.P.K Jayaweera** | About, Logistics, Market Insights, News & Blog | Delivery system, Insights analytics, Blog management |
-| **22APP6112 — D.G.T.D Abeysekara** | Help & FAQ, Contact, Admin Panel | Database design, Admin verification, Security, Role management, API testing |
+| **K.C.I De Silva** | Home, Login, Consumer Register, Consumer Dashboard, Marketplace, Product Details | Consumer login, Product fetching, Marketplace display |
+| **I.Y.S Jayaweera** | Farmer Register, Farmer Dashboard, Product Management, Farmer Orders, Community Forum | Farmer login, CRUD on products, Order handling |
+| **A.P.K Jayaweera** | About, Logistics, Market Insights, News & Blog | Delivery system, Insights analytics, Blog management |
+| **D.G.T.D Abeysekara** | Help & FAQ, Contact, Admin Panel | Database design, Admin verification, Security, Role management, API testing |
 
 ---
 
-## 📸 Screenshots
+/*## 📸 Screenshots
 
 > Add your screenshots to a `/screenshots` folder and they will appear here.
 
@@ -225,7 +225,7 @@ This project was developed by a team of 4 students from Sabaragamuwa University 
 |-----------------|------------|
 | ![Farmer](screenshots/farmer.png) | ![Admin](screenshots/admin.png) |
 
----
+---*/
 
 ## 🔐 Security Features
 
@@ -244,4 +244,4 @@ This project was developed for academic purposes at Sabaragamuwa University of S
 
 ---
 
-<p align="center">Made with ❤️ by Group _ | Sabaragamuwa University of Sri Lanka</p>
+
